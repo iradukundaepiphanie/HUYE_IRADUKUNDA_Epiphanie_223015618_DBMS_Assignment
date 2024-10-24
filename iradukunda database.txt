@@ -1,0 +1,242 @@
+mysql> CREATE TABLE NGOMA(ID_NO INT(20),F_NAME CHAR(20),L_NAME CHAR(20),GENDER CHAR(15),PROVINCE CHAR(15),DISTRICT CHAR(16),SECTOR CHAR(17),CELL CHAR(12),VILLAGE CHAR(10),TELEPHONE VARCHAR(15),E_MAIL VARCHAR(30));
+ERROR 1046 (3D000): No database selected
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA(ID_NO INT(20),F_NAME CHAR(20),L_NAME CHAR(20),GENDER CHAR(15),PROVINCE CHAR(15),DISTRICT CHAR(16),SECTOR CHAR(17),CELL CHAR(12),VILLAGE CHAR(10),TELEPHONE VARCHAR(15),E_MAIL VARCHAR(30));
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> INSERT INTO NGOMA VALUES('1199177001783038','UWIMANA','Emmanuella','F','SOUTH','GASABO','NDUBA','GASANZE','GATAGARA','+250788788045','uwimanaemmanuella@gmail.com');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('1120057002637476','RAMBA','Leonole','F','SOUTH','MUHANGA','BULINGA','MUSHISHIRO','KANAZI','GATAGARA','+12079345672','rambaleonole12');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('1120057002637476','RAMBA','Leonole','F','SOUTH','MUHANGA','BULINGA','MUSHISHIRO','KANZA','+12079345672','rambaleonole12');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('112006700835467849','GIRAMATA','VANESSA','F','KIGALI CITY','GASABO','GISOZI','KARAMBI','NYAMWIZA','+25078035273','giramatavanessa@12');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('120043665788937681','NIBEZA','JOY','F','NORTH','RUBAVU','MUHOZA','NDABA','MUKUNGWA','+250723065748','nibezajoy1@gmail.com');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('11230034462744876','MBONIGABA','EMILE','M','EAST','KIREHE','GATUMBA','MWISHO','KABARORE','+25078887634','MBONIGAEMILE@13');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('11230034453768','KARANGWA','CALLIXTE','M','WEST','BUGESERA','NYAMATA','MBYO','KABEZA','+250788888941','karangwacallixte32');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+
+
+ USE RUHANDE;
+Database changed
+mysql> SELECT * FROM NGOMA;
++------------+-----------+------------+--------+-------------+----------+----------+------------+----------+---------------+-----------------------------+
+| ID_NO      | F_NAME    | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR   | CELL       | VILLAGE  | TELEPHONE     | E_MAIL                      |
++------------+-----------+------------+--------+-------------+----------+----------+------------+----------+---------------+-----------------------------+
+| 2147483647 | UWIMANA   | Emmanuella | F      | SOUTH       | GASABO   | NDUBA    | GASANZE    | GATAGARA | +250788788045 | uwimanaemmanuella@gmail.com |
+| 2147483647 | RAMBA     | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA  | MUSHISHIRO | KANZA    | +12079345672  | rambaleonole12              |
+| 2147483647 | GIRAMATA  | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI   | KARAMBI    | NYAMWIZA | +25078035273  | giramatavanessa@12          |
+| 2147483647 | NIBEZA    | JOY        | F      | NORTH       | RUBAVU   | MUHOZA   | NDABA      | MUKUNGWA | +250723065748 | nibezajoy1@gmail.com        |
+| 2147483647 | MBONIGABA | EMILE      | M      | EAST        | KIREHE   | GATUMBA  | MWISHO     | KABARORE | +25078887634  | MBONIGAEMILE@13             |
+| 2147483647 | KARANGWA  | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA  | MBYO       | KABEZA   | +250788888941 | karangwacallixte32          |
+| 2147483647 | KWIZERA   | mable      | M      | south       | NYANZA   | RUSATIRA | MURINDI    | kanimba  | +25073426378  | kwizeramable4@gmail.com     |
++------------+-----------+------------+--------+-------------+----------+----------+------------+----------+---------------+-----------------------------+
+7 rows in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('16373788383737363','HABARUREMA','EMMY','M','EAST','KIREHE','KAMARO','RULI','BYIZA','+25078886374','ruremaemmy@gmail.com');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> INSERT INTO NGOMA VALUES('1120005466547585','MWIZA','AMOR','F','KIGALI','KICUKIRO','GATENGA','NYAGATOVU','KIMIRONKO','+250785069475','mwizamolar@123gmail.com');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM NGOMA;
++------------+------------+------------+--------+-------------+----------+----------+------------+-----------+---------------+-----------------------------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR   | CELL       | VILLAGE   | TELEPHONE     | E_MAIL                      |
++------------+------------+------------+--------+-------------+----------+----------+------------+-----------+---------------+-----------------------------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA    | GASANZE    | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA  | MUSHISHIRO | KANZA     | +12079345672  | rambaleonole12              |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI   | KARAMBI    | NYAMWIZA  | +25078035273  | giramatavanessa@12          |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA   | NDABA      | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA  | MWISHO     | KABARORE  | +25078887634  | MBONIGAEMILE@13             |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA  | MBYO       | KABEZA    | +250788888941 | karangwacallixte32          |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA | MURINDI    | kanimba   | +25073426378  | kwizeramable4@gmail.com     |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO   | RULI       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA  | NYAGATOVU  | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     |
++------------+------------+------------+--------+-------------+----------+----------+------------+-----------+---------------+-----------------------------+
+9 rows in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('112003655589900','GATAMA','Geofrer','F','south','Kamonyi','GACURABWENGE','RUGARIKA','NTURO','+2507895344','gatamageofrer@gmail.com');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM NGOMA;
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR       | CELL       | VILLAGE   | TELEPHONE     | E_MAIL                      |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA        | GASANZE    | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA      | MUSHISHIRO | KANZA     | +12079345672  | rambaleonole12              |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI       | KARAMBI    | NYAMWIZA  | +25078035273  | giramatavanessa@12          |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA       | NDABA      | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA      | MWISHO     | KABARORE  | +25078887634  | MBONIGAEMILE@13             |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA      | MBYO       | KABEZA    | +250788888941 | karangwacallixte32          |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA     | MURINDI    | kanimba   | +25073426378  | kwizeramable4@gmail.com     |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO       | RULI       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA      | NYAGATOVU  | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     |
+| 2147483647 | GATAMA     | Geofrer    | F      | south       | Kamonyi  | GACURABWENGE | RUGARIKA   | NTURO     | +2507895344   | gatamageofrer@gmail.com     |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD COUNTRY;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> ALTER TABLE NGOMA ADD COUNTRY CHAR(20);
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR       | CELL       | VILLAGE   | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA        | GASANZE    | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com | NULL    |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA      | MUSHISHIRO | KANZA     | +12079345672  | rambaleonole12              | NULL    |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI       | KARAMBI    | NYAMWIZA  | +25078035273  | giramatavanessa@12          | NULL    |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA       | NDABA      | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        | NULL    |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA      | MWISHO     | KABARORE  | +25078887634  | MBONIGAEMILE@13             | NULL    |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA      | MBYO       | KABEZA    | +250788888941 | karangwacallixte32          | NULL    |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA     | MURINDI    | kanimba   | +25073426378  | kwizeramable4@gmail.com     | NULL    |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO       | RULI       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        | NULL    |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA      | NYAGATOVU  | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     | NULL    |
+| 2147483647 | GATAMA     | Geofrer    | F      | south       | Kamonyi  | GACURABWENGE | RUGARIKA   | NTURO     | +2507895344   | gatamageofrer@gmail.com     | NULL    |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE TABLE NGOMA SET COUNTRY='RWANDA';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE NGOMA SET COUNTRY='RWANDA'' at line 1
+mysql> UPDATE NGOMA SET COUNTRY='RWANDA';
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR       | CELL       | VILLAGE   | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA        | GASANZE    | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com | RWANDA  |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA      | MUSHISHIRO | KANZA     | +12079345672  | rambaleonole12              | RWANDA  |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI       | KARAMBI    | NYAMWIZA  | +25078035273  | giramatavanessa@12          | RWANDA  |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA       | NDABA      | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        | RWANDA  |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA      | MWISHO     | KABARORE  | +25078887634  | MBONIGAEMILE@13             | RWANDA  |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA      | MBYO       | KABEZA    | +250788888941 | karangwacallixte32          | RWANDA  |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA     | MURINDI    | kanimba   | +25073426378  | kwizeramable4@gmail.com     | RWANDA  |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO       | RULI       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        | RWANDA  |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA      | NYAGATOVU  | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     | RWANDA  |
+| 2147483647 | GATAMA     | Geofrer    | F      | south       | Kamonyi  | GACURABWENGE | RUGARIKA   | NTURO     | +2507895344   | gatamageofrer@gmail.com     | RWANDA  |
++------------+------------+------------+--------+-------------+----------+--------------+------------+-----------+---------------+-----------------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT ID_NO,F_NAME,L_NAME,TELEPHONE,E_MAIL;
+ERROR 1054 (42S22): Unknown column 'ID_NO' in 'field list'
+mysql> SELECT*FROM NGOMA  ID_NO,F_NAME,L_NAME,TELEPHONE,E_MAIL;
+ERROR 1146 (42S02): Table 'ruhande.f_name' doesn't exist
+mysql> SELECT TABLE VALUES(ID_NAME,PROVINCE,DISTRICT,SECTOR,TELEPHONE)
+    ->
+    -> SELECT*FROM NGOMA  ID_NO,F_NAME,L_NAME,TELEPHONE,E_MAIL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE VALUES(ID_NAME,PROVINCE,DISTRICT,SECTOR,TELEPHONE)
+
+SELECT*FROM NGOMA  ID_' at line 1
+mysql> SELECT
+    -> SELECT *FROM NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT *FROM NGOMA' at line 2
+mysql> alter table ngoma drop cell;
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select *from ngoma;
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR       | VILLAGE   | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA        | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com | RWANDA  |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA      | KANZA     | +12079345672  | rambaleonole12              | RWANDA  |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI       | NYAMWIZA  | +25078035273  | giramatavanessa@12          | RWANDA  |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA       | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        | RWANDA  |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA      | KABARORE  | +25078887634  | MBONIGAEMILE@13             | RWANDA  |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA      | KABEZA    | +250788888941 | karangwacallixte32          | RWANDA  |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA     | kanimba   | +25073426378  | kwizeramable4@gmail.com     | RWANDA  |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        | RWANDA  |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA      | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     | RWANDA  |
+| 2147483647 | GATAMA     | Geofrer    | F      | south       | Kamonyi  | GACURABWENGE | NTURO     | +2507895344   | gatamageofrer@gmail.com     | RWANDA  |
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> select f_name from ngoma;
++------------+
+| f_name     |
++------------+
+| UWIMANA    |
+| RAMBA      |
+| GIRAMATA   |
+| NIBEZA     |
+| MBONIGABA  |
+| KARANGWA   |
+| KWIZERA    |
+| HABARUREMA |
+| MWIZA      |
+| GATAMA     |
++------------+
+10 rows in set (0.00 sec)
+
+
+> SELECT *FROM NGOMA WHERE GENDER='F' AND DISTRICT='GASABO';
++------------+----------+------------+--------+-------------+----------+--------+----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME   | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR | VILLAGE  | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+----------+------------+--------+-------------+----------+--------+----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA  | Emmanuella | F      | SOUTH       | GASABO   | NDUBA  | GATAGARA | +250788788045 | uwimanaemmanuella@gmail.com | RWANDA  |
+| 2147483647 | GIRAMATA | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI | NYAMWIZA | +25078035273  | giramatavanessa@12          | RWANDA  |
++------------+----------+------------+--------+-------------+----------+--------+----------+---------------+-----------------------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE GENDER='M' OR DISTRICT='GASABO';
++------------+------------+------------+--------+-------------+----------+----------+----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR   | VILLAGE  | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+------------+------------+--------+-------------+----------+----------+----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA    | GATAGARA | +250788788045 | uwimanaemmanuella@gmail.com | RWANDA  |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI   | NYAMWIZA | +25078035273  | giramatavanessa@12          | RWANDA  |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA  | KABARORE | +25078887634  | MBONIGAEMILE@13             | RWANDA  |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA  | KABEZA   | +250788888941 | karangwacallixte32          | RWANDA  |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA | kanimba  | +25073426378  | kwizeramable4@gmail.com     | RWANDA  |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO   | BYIZA    | +25078886374  | ruremaemmy@gmail.com        | RWANDA  |
++------------+------------+------------+--------+-------------+----------+----------+----------+---------------+-----------------------------+---------+
+6 rows in set (0.00 sec)
+mysql> desc ngoma;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID_NO     | int         | YES  |     | NULL    |       |
+| F_NAME    | char(20)    | YES  |     | NULL    |       |
+| L_NAME    | char(20)    | YES  |     | NULL    |       |
+| GENDER    | char(15)    | YES  |     | NULL    |       |
+| PROVINCE  | char(15)    | YES  |     | NULL    |       |
+| DISTRICT  | char(16)    | YES  |     | NULL    |       |
+| SECTOR    | char(17)    | YES  |     | NULL    |       |
+| VILLAGE   | char(10)    | YES  |     | NULL    |       |
+| TELEPHONE | varchar(15) | YES  |     | NULL    |       |
+| E_MAIL    | varchar(30) | YES  |     | NULL    |       |
+| COUNTRY   | char(20)    | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+11 rows in set (0.02 sec)
+
+mysql> select * from ngoma;
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+| ID_NO      | F_NAME     | L_NAME     | GENDER | PROVINCE    | DISTRICT | SECTOR       | VILLAGE   | TELEPHONE     | E_MAIL                      | COUNTRY |
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+| 2147483647 | UWIMANA    | Emmanuella | F      | SOUTH       | GASABO   | NDUBA        | GATAGARA  | +250788788045 | uwimanaemmanuella@gmail.com | RWANDA  |
+| 2147483647 | RAMBA      | Leonole    | F      | SOUTH       | MUHANGA  | BULINGA      | KANZA     | +12079345672  | rambaleonole12              | RWANDA  |
+| 2147483647 | GIRAMATA   | VANESSA    | F      | KIGALI CITY | GASABO   | GISOZI       | NYAMWIZA  | +25078035273  | giramatavanessa@12          | RWANDA  |
+| 2147483647 | NIBEZA     | JOY        | F      | NORTH       | RUBAVU   | MUHOZA       | MUKUNGWA  | +250723065748 | nibezajoy1@gmail.com        | RWANDA  |
+| 2147483647 | MBONIGABA  | EMILE      | M      | EAST        | KIREHE   | GATUMBA      | KABARORE  | +25078887634  | MBONIGAEMILE@13             | RWANDA  |
+| 2147483647 | KARANGWA   | CALLIXTE   | M      | WEST        | BUGESERA | NYAMATA      | KABEZA    | +250788888941 | karangwacallixte32          | RWANDA  |
+| 2147483647 | KWIZERA    | mable      | M      | south       | NYANZA   | RUSATIRA     | kanimba   | +25073426378  | kwizeramable4@gmail.com     | RWANDA  |
+| 2147483647 | HABARUREMA | EMMY       | M      | EAST        | KIREHE   | KAMARO       | BYIZA     | +25078886374  | ruremaemmy@gmail.com        | RWANDA  |
+| 2147483647 | MWIZA      | AMOR       | F      | KIGALI      | KICUKIRO | GATENGA      | KIMIRONKO | +250785069475 | mwizamolar@123gmail.com     | RWANDA  |
+| 2147483647 | GATAMA     | Geofrer    | F      | south       | Kamonyi  | GACURABWENGE | NTURO     | +2507895344   | gatamageofrer@gmail.com     | RWANDA  |
++------------+------------+------------+--------+-------------+----------+--------------+-----------+---------------+-----------------------------+---------+
+10 rows in set (0.00 sec)
+
+mysql>
